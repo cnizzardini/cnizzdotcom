@@ -1,0 +1,111 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    background: #000000;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#shell-bar {
+    width:50%;
+    margin: 0 25%;
+    background: rgba(0, 0, 0, 0.5);
+    height:60px;
+    position:absolute;
+    z-index:1000;
+    border-radius: 5px;
+    border: 1px solid #000;
+    input{
+        width:95%;
+        height:100%;
+        font-size:20px;
+        background: transparent;
+        border: none;
+        margin:0 2.5%;
+        color: #ffffff;
+    }
+    input::placeholder{
+        color: rgba(255, 255, 255, .75);
+        padding-left: 10px;
+    }
+    input:focus{
+        border: none;
+        outline: none;
+    }
+}
+
+#task-bar {
+    width:50%;
+    margin: 0 25%;
+    background: rgba(0, 0, 0, 0.5);
+    height:60px;
+    bottom: -5px;
+    position:absolute;
+    z-index:1000;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.bar {
+    width:50%;
+    margin: 0 25%;
+    background: rgba(0, 0, 0, 0.5);
+    height:60px;
+    position:absolute;
+    z-index:1000;
+    border-radius: 5px;
+    border: 1px solid #000;
+    input{
+        width:95%;
+        height:100%;
+        font-size:20px;
+        background: transparent;
+        border: none;
+        margin:0 2.5%;
+        color: #ffffff;
+    }
+    input::placeholder{
+        color: rgba(255, 255, 255, .75);
+        padding-left: 10px;
+    }
+    input:focus{
+        border: none;
+        outline: none;
+    }
+}
+
+.pretty {
+    background: url('/nizzardini/img/blotter-gradient-1.jpg') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .box {
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            border: none;
+            /*border:1px solid rgba(255, 255, 255, 1);
+            border-top: none;
+            border-left: none;*/
+            justify-content: center; 
+            align-items: center;
+            font-size: 70px;
+            color: #ffffff;
+            line-height: 1;
+            font-family: Helvetica;
+            font-weight: 200;
+            cursor: pointer;
+            transition: all .3s ease;
+            height: 20vh;
+            &.over {
+                background: rgba(255, 255, 255, .5) !important;
+                transform: rotateY(180deg);
+                transition-duration: 0.5s;
+                border:none;
+            }
+            transition-duration: 0.5s;
+        }
+    }
+}

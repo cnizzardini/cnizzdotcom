@@ -1,0 +1,112 @@
+/* 
+    Created on : Nov 6, 2017, 6:02:57 PM
+    Author     : chris
+*/
+body, html {
+  padding: 0;
+  margin: 0;
+  background: #000000;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+#shell-bar {
+  width: 50%;
+  margin: 0 25%;
+  background: rgba(0, 0, 0, 0.5);
+  height: 60px;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 5px;
+  border: 1px solid #000; }
+  #shell-bar input {
+    width: 95%;
+    height: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    margin: 0 2.5%;
+    color: #ffffff; }
+  #shell-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+    padding-left: 10px; }
+  #shell-bar input:focus {
+    border: none;
+    outline: none; }
+
+#task-bar {
+  width: 50%;
+  margin: 0 25%;
+  background: rgba(0, 0, 0, 0.5);
+  height: 60px;
+  bottom: -5px;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 5px;
+  border: 1px solid #000; }
+
+.bar {
+  width: 50%;
+  margin: 0 25%;
+  background: rgba(0, 0, 0, 0.5);
+  height: 60px;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 5px;
+  border: 1px solid #000; }
+  .bar input {
+    width: 95%;
+    height: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    margin: 0 2.5%;
+    color: #ffffff; }
+  .bar input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+    padding-left: 10px; }
+  .bar input:focus {
+    border: none;
+    outline: none; }
+
+.pretty {
+  background: url("/nizzardini/img/blotter-gradient-1.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden; }
+  .pretty .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); }
+    .pretty .grid .box {
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      border: none;
+      /*border:1px solid rgba(255, 255, 255, 1);
+      border-top: none;
+      border-left: none;*/
+      justify-content: center;
+      align-items: center;
+      font-size: 70px;
+      color: #ffffff;
+      line-height: 1;
+      font-family: Helvetica;
+      font-weight: 200;
+      cursor: pointer;
+      transition: all .3s ease;
+      height: 20vh;
+      transition-duration: 0.5s; }
+      .pretty .grid .box.over {
+        background: rgba(255, 255, 255, 0.5) !important;
+        transform: rotateY(180deg);
+        transition-duration: 0.5s;
+        border: none; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 6, 2017, 6:04:50 PM
+    Author     : chris
+*/
+
+/*# sourceMappingURL=nizz.css.map */
