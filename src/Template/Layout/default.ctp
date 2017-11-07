@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="shell-bar">
-        <input type="text" id="shell" autocomplete="off" placeholder='Type "help" to get started, press enter to run command' />
+        <input type="text" id="shell" autocomplete="off" placeholder='Type "party" to get started, press enter to run command' />
     </div>
     <div id="wrapper">
         <?php echo $this->fetch('content'); ?>
