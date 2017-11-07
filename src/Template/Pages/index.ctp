@@ -1,3 +1,7 @@
+<?php 
+    $this->assign('title','Chris Nizzardini - Software Engineer / Salt Lake City, UT');
+    $this->assign('description','Homepage of Chris Nizzardini. Random software engineering stuff and other musings.');
+?>
 <!-- Row 6 -->
 <div class="grid">
     <!-- Row 1 -->
