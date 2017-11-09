@@ -1,3 +1,4 @@
+<!-- todo thanks page for Lets Encrypt and http://konpa.github.io/devicon/ -->
 <!doctype html>
 <html lang="en">
 <head>
