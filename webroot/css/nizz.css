@@ -9,15 +9,22 @@ body, html {
   overflow-x: hidden;
   overflow-y: hidden; }
 
+#me {
+  font-size: 3.0em;
+  text-align: center;
+  transform: none !important;
+  font-family: 'Pinyon Script', cursive; }
+
 #shell-bar {
   width: 50%;
   margin: 0 25%;
   background: rgba(0, 0, 0, 0.5);
   height: 60px;
+  top: -3px;
   position: absolute;
   z-index: 1000;
   border-radius: 5px;
-  border: 1px solid #000; }
+  /*border: 1px solid #000;*/ }
   #shell-bar input {
     width: 95%;
     height: 100%;
@@ -108,6 +115,12 @@ body, html {
         transform: rotateY(180deg);
         transition: background 250ms linear;
         border: none; }
+      .pretty .grid .box.circle {
+        width: 20vh;
+        margin: 0 25%;
+        border-radius: 100px; }
+      .pretty .grid .box.move {
+        position: fixed; }
       .pretty .grid .box a {
         color: #ffffff;
         text-decoration: none; }

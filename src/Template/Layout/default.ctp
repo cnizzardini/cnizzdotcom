@@ -15,6 +15,7 @@
 
     <?= $this->Html->css('/nizzardini/css/nizz.css') ?>
     <?= $this->Html->css('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css') ?>
+    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Pinyon+Script"') ?>
 </head>
 <body>
     <div id="shell-bar">

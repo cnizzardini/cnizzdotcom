@@ -73,19 +73,19 @@
     </div>
 
     <!-- Row 5 -->
-    <div class="box">
+    <div class="box taskbar">
         &nbsp;
     </div>
-    <div class="box">
+    <div class="box taskbar">
         &nbsp;
     </div>
-    <div class="box">
+    <div class="box taskbar">
         &nbsp;
     </div>
-    <div class="box">
+    <div class="box taskbar">
         &nbsp;
     </div>
-    <div class="box">
-        &nbsp;
+    <div class="box taskbar" id="me">
+        Chris Nizzardini
     </div>
 </div>

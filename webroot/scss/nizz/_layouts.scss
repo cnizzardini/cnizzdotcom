@@ -6,6 +6,13 @@ body,html {
     overflow-y:hidden;
 }
 
+#me {
+    font-size:3.0em;
+    text-align: center;
+    transform: none !important;
+    font-family: 'Pinyon Script', cursive;
+}
+
 #shell-bar {
     width:50%;
     margin: 0 25%;
