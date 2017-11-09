@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <?= $this->Html->css('/nizzardini/css/nizz.css') ?>
+    <?= $this->Html->css('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css') ?>
 </head>
 <body>
     <div id="shell-bar">
@@ -20,9 +21,6 @@
     </div>
     <div id="wrapper">
         <?php echo $this->fetch('content'); ?>
-    </div>
-    <div id="task-bar">
-        &nbsp;
     </div>
     <script src="/nizzardini/js/nizz.js"></script>
 </body>

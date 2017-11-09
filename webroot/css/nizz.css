@@ -89,15 +89,30 @@ body, html {
       line-height: 1;
       font-family: Helvetica;
       font-weight: 200;
-      cursor: pointer;
+      cursor: auto;
       transition: all .3s ease;
       height: 20vh;
-      transition-duration: 0.5s; }
+      transition-duration: 0.5s;
+      /*            &.linkable {
+                      background: rgba(96, 190, 143, .5); 
+                      border: rgb(96, 190, 143); 
+                      border-radius:5px
+                  }*/ }
       .pretty .grid .box.over {
-        background: rgba(255, 255, 255, 0.5) !important;
+        background: rgba(255, 255, 255, 0.5);
         transform: rotateY(180deg);
-        transition-duration: 0.5s;
+        transition: all 500ms ease-out;
         border: none; }
+      .pretty .grid .box:hover {
+        background: rgba(255, 255, 255, 0.5);
+        transform: rotateY(180deg);
+        transition: background 250ms linear;
+        border: none; }
+      .pretty .grid .box a {
+        color: #ffffff;
+        text-decoration: none; }
+      .pretty .grid .box a:hover {
+        /*color: #60be86;*/ }
 
 /*
 To change this license header, choose License Headers in Project Properties.

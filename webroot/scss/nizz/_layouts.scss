@@ -96,16 +96,34 @@ body,html {
             line-height: 1;
             font-family: Helvetica;
             font-weight: 200;
-            cursor: pointer;
+            cursor: auto;
             transition: all .3s ease;
             height: 20vh;
+            transition-duration: 0.5s;
             &.over {
-                background: rgba(255, 255, 255, .5) !important;
+                background: rgba(255, 255, 255, .5);
                 transform: rotateY(180deg);
-                transition-duration: 0.5s;
+                transition: all 500ms ease-out;
                 border:none;
             }
-            transition-duration: 0.5s;
+            &:hover {
+                background: rgba(255, 255, 255, .5);
+                transform: rotateY(180deg);
+                transition: background 250ms linear;
+                border:none;
+            }
+/*            &.linkable {
+                background: rgba(96, 190, 143, .5); 
+                border: rgb(96, 190, 143); 
+                border-radius:5px
+            }*/
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+            a:hover {
+                /*color: #60be86;*/
+            }
         }
     }
 }

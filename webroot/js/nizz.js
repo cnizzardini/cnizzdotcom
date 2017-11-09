@@ -6,7 +6,9 @@ App.music = null;
 App.init = function () {
     this.shell.focus();
     this.command();
-    this.flip();
+    //this.flip();
+    this.rotate();
+    document.querySelector('#wrapper').classList.add('pretty');
     this.listeners();
     this.party(0);
     setTimeout(function(){
@@ -67,7 +69,7 @@ App.party = function (music) {
         var index = Math.floor(Math.random() * boxes.length);
         if (boxes[ index ] != undefined) {
             boxes[ index ].classList.toggle('over');
-            var opacity = Math.random() * 1;
+            var opacity = Math.random() * .9;
             boxes[ index ].setAttribute("style", 'background: rgba(255, 255, 255, ' + opacity + ')');
         }
         if (music != 0 && me.music != null && me.music.paused) {
@@ -94,7 +96,6 @@ App.kill = function() {
 
 App.flip = function () {
     this.reset();
-    document.querySelector('#wrapper').classList.add('pretty');
 
     var boxes = document.querySelectorAll('.box');
     var me = this;
@@ -112,18 +113,21 @@ App.flip = function () {
 
 App.rotate = function () {
     this.reset();
-    document.querySelector('#wrapper').classList.add('pretty');
 
     var boxes = document.querySelectorAll('.box');
     var me = this;
     for (var i=0; i<boxes.length; i++) {
-        boxes[i].removeEventListener('mouseover', null);
-        boxes[i].addEventListener('mouseover', function(){
-            this.classList.add('over');
+        boxes[i].removeEventListener('mouseenter', null);
+        boxes[i].addEventListener('mouseenter', function(){
+            if (this.querySelector('a')) {
+                this.classList.add('linkable');
+            }
         });
-        boxes[i].addEventListener('mouseout', function(){
-            this.classList.remove('over');
-        });                
+        boxes[i].addEventListener('mouseleave', function(){
+            if (this.querySelector('a')) {
+                this.classList.remove('linkable');
+            }
+        }); 
     }
 };
 
@@ -144,13 +148,13 @@ App.reset = function () {
 
     var boxes = document.querySelectorAll('.box');
     for (var i=0; i<boxes.length; i++) {
-        boxes[i].setAttribute("style", 'background: inherit');
+        boxes[i].setAttribute("style", '');
     }
 
     var reset = setInterval(function(){
         var index = Math.floor(Math.random() * flipped.length);
         if (flipped[ index ] != undefined) {
-            flipped[ index ].setAttribute("style", 'background: inherit');
+            flipped[ index ].setAttribute("style", '');
             flipped[ index ].classList.remove('over');
         }
 

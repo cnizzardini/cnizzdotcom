@@ -23,53 +23,53 @@
 
     <!-- Row 2 -->
     <div class="box">
-        C
+        <i class="devicon-linux-plain"></i>
     </div>
     <div class="box">
-        H
+        <i class="devicon-apache-plain"></i>
     </div>
     <div class="box">
-        R
+        <i class="devicon-mysql-plain"></i>
     </div>
     <div class="box">
-        I
+        <i class="devicon-php-plain"></i>
     </div>
     <div class="box">
-        S
+        <i class="devicon-bootstrap-plain"></i>
     </div>
 
     <!-- Row 3 -->
     <div class="box">
-        N
+        <i class="devicon-css3-plain"></i>
     </div>
     <div class="box">
-        I
+        <i class="devicon-ubuntu-plain"></i>
     </div>
     <div class="box">
-        Z
+        <a href="https://github.com/cnizzardini" target="_blank"><i class="devicon-github-plain"></i></a><br/>
     </div>
     <div class="box">
-        Z
+        <i class="devicon-javascript-plain"></i>
     </div>
     <div class="box">
-        A
+        <i class="devicon-postgresql-plain"></i>
     </div>
 
     <!-- Row 4 -->
     <div class="box">
-        R
+        <i class="devicon-redis-plain"></i>
     </div>
     <div class="box">
-        D
+        <i class="devicon-sass-original"></i>
     </div>
     <div class="box">
-        I
+        <a href="https://twitter.com/cnizzardini" target="_blank"><i class="devicon-twitter-plain"></i></a>
     </div>
     <div class="box">
-        N
+        <i class="devicon-jquery-plain"></i>
     </div>
     <div class="box">
-        I
+        <i class="devicon-less-plain-wordmark"></i>
     </div>
 
     <!-- Row 5 -->
