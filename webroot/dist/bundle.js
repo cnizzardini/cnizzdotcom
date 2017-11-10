@@ -89,11 +89,6 @@ class Nizz {
         //this.flip();
         this.rotate();
         document.querySelector('#wrapper').classList.add('pretty');
-        this.party(0);
-        var me = this;
-        setTimeout(function(){
-            me.reset();
-        }, 3000);
     }
     
     help() {
@@ -123,10 +118,10 @@ class Nizz {
         var boxes = document.querySelectorAll('.box');
 
         if (music != 0) {
-            this.music = new Audio('/nizzardini/mp3/sabrepulse-massive-damage-fighter-x-remix.mp3');
+            this.music = new Audio('/nizzardini/assets/mp3/sabrepulse-massive-damage-fighter-x-remix.mp3');
             this.music.play();
             this.Terminal.output({
-                string: 'Lets party!'
+                string: 'Turn up your volume. Lets party!'
             });
         }
 
