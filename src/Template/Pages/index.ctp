@@ -2,6 +2,7 @@
     $this->assign('title','Chris Nizzardini - Software Engineer / Salt Lake City, UT');
     $this->assign('description','Homepage of Chris Nizzardini. Random software engineering stuff and other musings.');
 ?>
+
 <!-- Row 6 -->
 <div class="grid">
     <!-- Row 1 -->
@@ -73,19 +74,19 @@
     </div>
 
     <!-- Row 5 -->
-    <div class="box taskbar">
+    <div class="box">
         &nbsp;
     </div>
-    <div class="box taskbar">
+    <div class="box">
         &nbsp;
     </div>
-    <div class="box taskbar">
+    <div class="box">
         &nbsp;
     </div>
-    <div class="box taskbar">
+    <div class="box">
         &nbsp;
     </div>
-    <div class="box taskbar" id="me">
+    <div class="box" id="me">
         Chris Nizzardini
     </div>
 </div>

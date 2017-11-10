@@ -1,0 +1,152 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    background: #000000;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#me {
+    font-size:3.0em;
+    text-align: center;
+    font-family: 'Pinyon Script', cursive;
+}
+
+#terminal {
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index:1000;
+    margin: 100px auto 0 auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    border-radius: 3px;
+    cursor: text;
+    
+    .title {
+        cursor: pointer;
+        text-align: center;
+        color: #E6E6E6;
+        padding: 5px 0;
+        margin: 0;
+        font-size: 1em;
+        border: 1px solid #000000;
+        border-bottom: none;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background: #404040;
+        background: linear-gradient(to bottom,  #404040 0%,#000000 100%); 
+        &.grab {
+            cursor: grabbing;
+        }
+    }
+
+    ul {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0;
+        height:400px;
+        padding: 5px;
+        list-style: none;
+        background: rgba(0,0,0,0.6);
+        color: rgba(69,212,12,1);
+        font: 1em 'Andale Mono', Consolas, 'Courier New';
+        line-height: 1.6em;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        
+        li#prompt:before,li.executed:before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        li {
+            word-wrap: break-word;
+            position: relative;
+            padding: 0 0 0 15px;
+            input{
+                width:100%;
+                font: 1.0em 'Andale Mono', Consolas, 'Courier New';
+                background: transparent;
+                border: none;
+                color: rgba(69,212,12,1);
+            }
+            input::placeholder{
+                color: rgba(69,212,12,1);
+                padding-left: 10px;
+            }
+            input:focus{
+                border: none;
+                outline: none;
+            }
+            &.executed {
+                color: rgb(250, 128, 114);
+            }
+        }
+    }
+}
+
+.pretty {
+    background: url('/nizzardini/img/blotter-gradient-1.jpg') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .box {
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            border: none;
+            /*border:1px solid rgba(255, 255, 255, 1);
+            border-top: none;
+            border-left: none;*/
+            justify-content: center; 
+            align-items: center;
+            font-size: 70px;
+            color: #ffffff;
+            line-height: 1;
+            font-family: Helvetica;
+            font-weight: 200;
+            cursor: auto;
+            transition: all .3s ease;
+            height: 20vh;
+            transition-duration: 0.5s;
+            &.over {
+                background: rgba(255, 255, 255, .5);
+                transform: rotateY(180deg);
+                transition: all 500ms ease-out; 
+                border:none;
+            }
+            &:hover {
+                background: rgba(255, 255, 255, .5);
+                transform: rotateY(180deg);
+                transition: background 250ms linear;
+                border:none;
+            }
+            &.circle {
+                width: 20vh;
+                margin: 0 25%;
+                border-radius: 100px;
+            }
+            &.move {
+                position:fixed;
+            }
+
+            /*            &.linkable {
+                            background: rgba(96, 190, 143, .5); 
+                            border: rgb(96, 190, 143); 
+                            border-radius:5px
+                        }*/
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+            a:hover {
+                /*color: #60be86;*/
+            }
+        }
+    }
+}

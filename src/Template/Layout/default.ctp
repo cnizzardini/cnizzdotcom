@@ -13,17 +13,14 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-    <?= $this->Html->css('/nizzardini/css/nizz.css') ?>
+    <?//= $this->Html->css('/nizzardini/css/nizz.css') ?>
     <?= $this->Html->css('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css') ?>
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=Pinyon+Script"') ?>
 </head>
 <body>
-    <div id="shell-bar">
-        <input type="text" id="shell" autocomplete="off" placeholder='Type "party" to get started, press enter to run command' />
-    </div>
     <div id="wrapper">
         <?php echo $this->fetch('content'); ?>
     </div>
-    <script src="/nizzardini/js/nizz.js"></script>
+    <?php echo $this->Html->script('/nizzardini/dist/bundle.js'); ?>
 </body>
 </html>

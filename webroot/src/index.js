@@ -1,72 +1,59 @@
-App = {} || App;
-App.shell = document.querySelector('#shell');
-App.isParty = null;
-App.music = null;
+import styles from './scss/styles.scss';
+import Terminal from './terminal';
 
 class Nizz {
 
     constructor() {
-        this.shell = document.querySelector('#shell');
         this.isParty = null;
         this.music = null;
+        this.Terminal = new Terminal('/home/chris', this);
+        this.Terminal.launch();
+        this.init();
     }
     
     init() {
-        this.shell.focus();
-        this.command();
         //this.flip();
         this.rotate();
         document.querySelector('#wrapper').classList.add('pretty');
-        this.listeners();
         this.party(0);
         var me = this;
         setTimeout(function(){
             me.reset();
-        },3000);
+        }, 3000);
     }
-    
-    listeners() {
-        var me = this;
-        document.addEventListener('shellExec', function(e){
-            me.shell.value = '';
-        });
-    }
-    
-    command() {
-        var me = this;
-        this.shell.addEventListener('keypress', function (e) {
-            var key = e.which || e.keyCode;
-            var error = null;
-
-            if (key === 13) {
-                var error = false;
-                var cmd = me.shell.value;
-                if (me[ cmd ] !== undefined) {
-                    me.shell.value = '';
-                    return me[ cmd ](cmd);
-                } else {
-                    me.shell.value = 'Command not found';
-                    error = true;
-                }
-            }
-
-            if (error == false) {
-                new CustomEvent("shellExec", {});
-            }
-        });
-    };
     
     help() {
-        this.shell.value = 'Generate a list of commands';
+        this.Terminal.output('Options:');
+        this.Terminal.output('about - a little bit about me');
+        this.Terminal.output('github - go to my github');
+        this.Terminal.output('party - starts a party');
+        this.Terminal.output('pause - pauses the party');
     }
     
-    party(music) {
+    about() {
+        this.Terminal.output('Name: Chris Nizzardini');
+        this.Terminal.output('Location: Salt Lake City, UT');
+        this.Terminal.output('Occupation: Software Engineer');
+        this.Terminal.output('Skills: LAMP stack, JavaScript, CakePHP, jQuery, Full-Stack Engineer, Security, and more...');
+        this.Terminal.output('Freelancing: Yes, I am available for freelance work.');
+        this.Terminal.output('Contact: For now you can mention me or direct message me on twitter @cnizzardini');
+    }
+    
+    github() {
+        this.Terminal.output('Launching https://github.com/cnizzardini');
+        window.open('https://github.com/cnizzardini', '_blank').focus();
+    }
+    
+    party(music) {        
         this.reset();
         var boxes = document.querySelectorAll('.box');
 
         if (music != 0) {
             this.music = new Audio('/nizzardini/mp3/sabrepulse-massive-damage-fighter-x-remix.mp3');
             this.music.play();
+            this.Terminal.output({
+                string: 'Lets party!'
+            });
         }
 
         var me = this;
@@ -168,5 +155,4 @@ class Nizz {
     };
 }
 
-var nizz = new Nizz();
-nizz.init();
+new Nizz();
