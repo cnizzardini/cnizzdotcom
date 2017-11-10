@@ -49,7 +49,7 @@ class Nizz {
         var boxes = document.querySelectorAll('.box');
 
         if (music != 0) {
-            this.music = new Audio('/nizzardini/mp3/sabrepulse-massive-damage-fighter-x-remix.mp3');
+            this.music = new Audio('/nizzardini/assets/mp3/sabrepulse-massive-damage-fighter-x-remix.mp3');
             this.music.play();
             this.Terminal.output({
                 string: 'Lets party!'
