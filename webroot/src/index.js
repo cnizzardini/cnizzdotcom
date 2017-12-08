@@ -29,7 +29,7 @@ class Nizz {
         this.Terminal.output('Name: Chris Nizzardini');
         this.Terminal.output('Location: Salt Lake City, UT');
         this.Terminal.output('Occupation: Software Engineer');
-        this.Terminal.output('Skills: LAMP stack, JavaScript, CakePHP, jQuery, Full-Stack Engineer, Security, and more...');
+        this.Terminal.output('Skills: Linux, Apache, Mysql, PHP, JavaScript, CakePHP, all those icons in the background and more...');
         this.Terminal.output('Freelancing: Yes, I am available for freelance work.');
         this.Terminal.output('Contact: For now you can mention me or direct message me on twitter @cnizzardini');
     }

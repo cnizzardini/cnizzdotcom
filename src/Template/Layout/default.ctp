@@ -21,6 +21,6 @@
     <div id="wrapper">
         <?php echo $this->fetch('content'); ?>
     </div>
-    <?php echo $this->Html->script('/nizzardini/dist/bundle.js'); ?>
+    <?php echo $this->Html->script('/nizzardini/dist/bundle.js?t=' . microtime(true)); ?>
 </body>
 </html>
