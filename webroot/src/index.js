@@ -21,6 +21,8 @@ class Nizz {
         this.Terminal.output('Options:');
         this.Terminal.output('about - a little bit about me');
         this.Terminal.output('github - go to my github');
+        this.Terminal.output('medium - go to my medium blog');
+        this.Terminal.output('source - go to source code for this website');
         this.Terminal.output('party - starts a party');
         this.Terminal.output('pause - pauses the party');
     }
@@ -37,6 +39,16 @@ class Nizz {
     github() {
         this.Terminal.output('Launching https://github.com/cnizzardini');
         window.open('https://github.com/cnizzardini', '_blank').focus();
+    }
+    
+    medium() {
+        this.Terminal.output('Launching https://medium.com/@cnizzardini');
+        window.open('https://medium.com/@cnizzardini', '_blank').focus();
+    }
+    
+    source() {
+        this.Terminal.output('Launching website source code https://github.com/cnizzardini/cnizzdotcom');
+        window.open('https://github.com/cnizzardini/cnizzdotcom', '_blank').focus();
     }
     
     party(music) {        
