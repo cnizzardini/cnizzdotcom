@@ -13,13 +13,7 @@ body,html {
 
 #terminal {
     
-    @include media(">=phone", "<tablet") {
-        width: 90vw;
-        height: 100vh;
-        margin: 0 auto 0 auto;
-    }
-    
-    @include media(">=tablet") {
+    @include media(">phone", "<=tablet") {
         width: 70vw;
         height: 50vh;
         transform: translate(-50%, 0);
@@ -27,6 +21,19 @@ body,html {
         left: 50%;
     }
     
+    @include media(">=phone", "<tablet") {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto 0 auto;
+    }
+    
+    @include media(">tablet") {
+        width: 50vw;
+        height: 50vh;
+        transform: translate(-50%, 0);
+        margin: 100px auto 0 auto;
+        left: 50%;
+    }
     
     position: absolute;
     z-index:1000;
@@ -53,10 +60,20 @@ body,html {
     }
 
     ul {
-        overflow-y: scroll;
-        overflow-x: hidden;
-        margin: 0;
-        height:46vh;
+        @include media(">=phone", "<tablet") {
+            height: 100%;
+            margin: 0 auto 0 auto;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            margin: 0;
+        }
+        @include media(">=tablet") {
+            height:46vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin: 0;
+        }
+        
         padding: 5px;
         list-style: none;
         background: rgba(0,0,0,0.6);
