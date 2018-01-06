@@ -125,6 +125,15 @@ class Nizz {
         window.open('https://github.com/cnizzardini/cnizzdotcom', '_blank').focus();
     }
     
+    mail() {
+        return false;
+        this.Terminal.input('Enter your name:');
+        this.Terminal.input('Enter your email address:');
+        this.Terminal.input('Enter a subject:');
+        this.Terminal.input('Enter a message:');
+        this.Terminal.input('Do you want to send (Yes/No)?');
+    }
+    
     party(music) {        
         this.reset();
         var boxes = document.querySelectorAll('.box');
@@ -911,12 +920,11 @@ class Terminal {
      * @returns {Shell@arr;@call;app|Boolean}
      */
     execute(key) {
-        console.log('exec')
         if (key !== 13) {
             return false;
         }
         
-        var cmd = this.command.value;
+        var cmd = this.command.value.toLowerCase().trim();
         
         this.output({
             string: cmd,
@@ -966,6 +974,10 @@ class Terminal {
         this.command.value = '';
         this.command.focus();
         this.list.scrollTop = this.list.scrollHeight;
+    }
+    
+    input(question) {
+        this.output(question);
     }
     
     /**

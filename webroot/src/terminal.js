@@ -72,12 +72,11 @@ class Terminal {
      * @returns {Shell@arr;@call;app|Boolean}
      */
     execute(key) {
-        console.log('exec')
         if (key !== 13) {
             return false;
         }
         
-        var cmd = this.command.value;
+        var cmd = this.command.value.toLowerCase().trim();
         
         this.output({
             string: cmd,
@@ -127,6 +126,10 @@ class Terminal {
         this.command.value = '';
         this.command.focus();
         this.list.scrollTop = this.list.scrollHeight;
+    }
+    
+    input(question) {
+        this.output(question);
     }
     
     /**

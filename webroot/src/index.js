@@ -51,6 +51,15 @@ class Nizz {
         window.open('https://github.com/cnizzardini/cnizzdotcom', '_blank').focus();
     }
     
+    mail() {
+        return false;
+        this.Terminal.input('Enter your name:');
+        this.Terminal.input('Enter your email address:');
+        this.Terminal.input('Enter a subject:');
+        this.Terminal.input('Enter a message:');
+        this.Terminal.input('Do you want to send (Yes/No)?');
+    }
+    
     party(music) {        
         this.reset();
         var boxes = document.querySelectorAll('.box');
