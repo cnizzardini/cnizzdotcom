@@ -900,6 +900,9 @@ class Terminal {
             var key = e.which || e.keyCode;
             me.execute(key);
         }); 
+        this.terminal.addEventListener('click', function (e) {
+            document.querySelector('#terminal ul li input').focus();
+        });
     }
     
     /**
