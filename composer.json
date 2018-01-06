@@ -1,6 +1,6 @@
 {
-    "name": "your-name-here/Nizzardini",
-    "description": "Nizzardini plugin for CakePHP",
+    "name": "cnizzardini/Nizzardini",
+    "description": "Cnizz.com",
     "type": "cakephp-plugin",
     "license": "MIT",
     "require": {

@@ -1,11 +1,16 @@
-# Nizzardini plugin for CakePHP
+# Cnizz.com
 
-## Installation
+Just a repository for my personal website.
 
-You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
+## CakePHP
 
-The recommended way to install composer packages is:
+I created this as a CakePHP plugin so I don't have to have multiple installs of CakePHP on my localhost.
 
-```
-composer require your-name-here/Nizzardini
-```
+## Webpack
+
+There is some webpack stuff in here that I am just playing around with. The main site and terminal application 
+are built using ECMAScript 6.
+
+## Building
+
+./node_modules/.bin/webpack --config webpack.config.js --watch
