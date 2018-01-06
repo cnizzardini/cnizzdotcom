@@ -1,7 +1,6 @@
 body,html {
     padding: 0;
     margin: 0;
-    background: #000000;
     overflow-x:hidden;
     overflow-y:hidden;
 }
@@ -13,18 +12,24 @@ body,html {
 }
 
 #terminal {
-    @include media(">=phone") {
-        display: none;
+    
+    @include media(">=phone", "<tablet") {
+        width: 90vw;
+        height: 100vh;
+        margin: 0 auto 0 auto;
     }
+    
     @include media(">=tablet") {
-        width: 800px;
-        display: block;
+        width: 70vw;
+        height: 50vh;
+        transform: translate(-50%, 0);
+        margin: 100px auto 0 auto;
+        left: 50%;
     }
+    
+    
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
     z-index:1000;
-    margin: 100px auto 0 auto;
     box-shadow: 0 0 30px rgba(0,0,0,0.4);
     border-radius: 3px;
     cursor: text;
@@ -51,7 +56,7 @@ body,html {
         overflow-y: scroll;
         overflow-x: hidden;
         margin: 0;
-        height:400px;
+        height:46vh;
         padding: 5px;
         list-style: none;
         background: rgba(0,0,0,0.6);
@@ -98,8 +103,14 @@ body,html {
     background: url('/nizzardini/img/blotter-gradient-1.jpg') no-repeat center;
     background-size: cover;
     overflow: hidden;
-
+    @include media(">=phone", "<tablet") {
+        width: 100vw;
+        height: 100vh;
+    }
     .grid {
+        @include media(">=phone", "<tablet") {
+            display: none;
+        }
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         .box {
